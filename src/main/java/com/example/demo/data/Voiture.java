@@ -9,16 +9,19 @@ public class Voiture {
     public Voiture(){
     }
 
-    public Voiture(String marque, int prix) {
+    public Voiture(String marque, int prix)
+    {
         this.marque = marque;
         this.prix = prix;
     }
 
-    public int getId() {
+    public int getId()
+    {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(int id)
+    {
         this.id = id;
     }
 
@@ -27,20 +30,24 @@ public class Voiture {
         return marque;
     }
 
-    public void setMarque(String marque) {
+    public void setMarque(String marque)
+    {
         this.marque = marque;
     }
 
-    public int getPrix() {
+    public int getPrix()
+    {
         return prix;
     }
 
-    public void setPrix(int prix) {
+    public void setPrix(int prix)
+    {
         this.prix = prix;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Car{" +
                 "marque='" + marque + '\'' +
                 ", prix=" + prix +

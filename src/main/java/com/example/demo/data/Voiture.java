@@ -22,7 +22,8 @@ public class Voiture {
         this.id = id;
     }
 
-    public String getMarque() {
+    public String getMarque()
+    {
         return marque;
     }
 

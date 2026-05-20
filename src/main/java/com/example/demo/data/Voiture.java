@@ -9,10 +9,10 @@ public class Voiture {
     public Voiture(){
     }
 
-    public Voiture(String marque, int prix)
+    public Voiture(String uneMarque, int unPrix)
     {
-        this.marque = marque;
-        this.prix = prix;
+        this.marque = uneMarque;
+        this.prix = unPrix;
     }
 
     public int getId()

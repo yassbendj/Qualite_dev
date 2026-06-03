@@ -15,14 +15,14 @@ public class VoitureTest {
         Voiture v = new Voiture("Audi", 2500);
         Assert.isTrue(v.getMarque().equals("Audi"), "C'est une Audi");
         Assert.isTrue(v.getPrix()==2500, "Coute 2500€");
-
     }
+
     @Test
     void testSetId()
     {
-        Car car = new Car();
+        Voiture v = new Voiture();
         car.setId(100);
-        assertEquals(100, car.getId(), "Le setter d'ID n'a pas correctement modifié la valeur.");
+        assertEquals(100, v.getId(), "Le setter d'ID n'a pas correctement modifié la valeur.");
     }
 
 }

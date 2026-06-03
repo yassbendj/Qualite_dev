@@ -17,7 +17,6 @@ public class VoitureTest {
         Assert.isTrue(v.getPrix()==2500, "Coute 2500€");
 
     }
-
     @Test
     void testSetId()
     {

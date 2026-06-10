@@ -20,6 +20,7 @@ public class VoitureTest {
     @Test
     void testSetId()
     {
+        Voiture car = new Voiture("TestCar", 100);
         car.setId(100);
         assertEquals(100, car.getId(), "Le setter d'ID n'a pas correctement modifié la valeur.");
     }

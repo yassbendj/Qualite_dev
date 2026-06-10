@@ -10,8 +10,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class VoitureTest {
 
     @Test
-    void creerVoiture(){
-        assertEquals(1,1);
+    void creerVoiture()
+    {
+        Voiture v = new Voiture("Audi", 2500);
+        Assert.isTrue(v.getMarque().equals("Audi"), "C'est une Audi");
+        Assert.isTrue(v.getPrix()==2500, "Coute 2500€");
     }
 
+    @Test
+    void testSetId()
+    {
+        car.setId(100);
+        assertEquals(100, car.getId(), "Le setter d'ID n'a pas correctement modifié la valeur.");
+    }
 }

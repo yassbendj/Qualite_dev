@@ -15,9 +15,12 @@ public class StatistiqueController
     @GetMapping(value = "/statistique")
     public Echantillon getStatistiques() throws PasDeVoitureException
     {
-        try{
+        try
+        {
             return statistique.prixMoyen();
-        } catch (ArithmeticException e) {
+        }
+        catch (ArithmeticException e)
+        {
             throw new PasDeVoitureException();
         }
     }

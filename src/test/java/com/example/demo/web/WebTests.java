@@ -19,12 +19,34 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class WebTests {
-
+class WebTests
+{
     @MockBean
     StatistiqueImpl statistiqueImpl;
 
     @Autowired
     MockMvc mockMvc;
 
+    @Test
+    void testGetVoitures() throws Exception
+    {
+       /*
+        StatistiqueImpl statistiqueImpl = new StatistiqueImpl();
+        statistiqueImpl.ajouter(new Voiture("Toyota", 2020));
+        Echantillon e =   statistiqueImpl.prixMoyen();
+        */
+
+        Echantillon echantillon = new Echantillon();
+        echantillon.setNombreDeVoitures(2);
+        echantillon.setPrixMoyen(2000);
+
+        when(statistiqueImpl.prixMoyen()).thenReturn(echantillon);
+
+        mockMvc.perform(get("/statistique")
+                        .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.nombreDeVoitures").value(2))
+                .andExpect(jsonPath("$.prixMoyen").value(2000));
+    }
 }
